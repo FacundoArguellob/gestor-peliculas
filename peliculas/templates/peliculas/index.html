@@ -1,9 +1,22 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Gestor de Películas</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestor de Películas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'css/main.css' %}" />
 </head>
-<body>
-    <h1>¡Hola Facu! El proyecto está funcionando 💥</h1>
+<body class="dark">
+  <div class="container centered">
+    <h1>🎬 Gestor de Películas</h1>
+    <p class="intro">Organizá tus películas favoritas, llevá el control de lo que viste y descubrí nuevas joyas del cine.</p>
+    <div class="actions">
+      <a href="{% url 'login' %}" class="btn">Ingresar</a>
+      <a href="{% url 'register' %}" class="btn secondary">Registrarse</a>
+    </div>
+  </div>
 </body>
 </html>
